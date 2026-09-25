@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const COFFEES = ['Flat White', 'Long Black', 'Espresso'] as const
+const COFFEES = ['Flat White', 'Long Black', 'Espresso', 'Cappuccino'] as const
 const FULFILMENTS = ['Pick up', 'Delivery'] as const
 
 type Coffee = (typeof COFFEES)[number]
