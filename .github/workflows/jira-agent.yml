@@ -69,8 +69,8 @@ jobs:
               console.log(`Successfully transitioned ${issueKey} to "${targetStatus}".`);
             }
 
-            // --- TRIGGER 1: PR Created ---
-            if (action === 'opened') {
+            // --- TRIGGER 1: PR Created/Reopened ---
+            if (action === 'opened' || action === 'reopened') {
               // 1. Link PR to Jira issue
               await jiraRequest(`issue/${issueKey}/remotelink`, 'POST', {
                 object: {
