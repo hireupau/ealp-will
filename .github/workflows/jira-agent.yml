@@ -2,7 +2,7 @@ name: Jira Automation Agent
 
 on:
   pull_request:
-    types: [opened, closed]
+    types: [opened, reopened, closed]
 
 jobs:
   sync-jira:
